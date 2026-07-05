@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #eef2ff;
+  --text: #0f172a;
+  --muted: #52607a;
+  --surface: rgba(255, 255, 255, 0.74);
+  --surface-strong: rgba(255, 255, 255, 0.95);
+  --border: rgba(15, 23, 42, 0.08);
+  --shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+  --accent: #5b5bf7;
+  --accent-2: #10b981;
+  --accent-3: #f43f5e;
+}
+
+[data-theme="dark"] {
+  --bg: #070b17;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --surface: rgba(15, 23, 42, 0.74);
+  --surface-strong: rgba(15, 23, 42, 0.94);
+  --border: rgba(148, 163, 184, 0.14);
+  --shadow: 0 28px 90px rgba(2, 6, 23, 0.6);
+  --accent: #7c3aed;
+  --accent-2: #14b8a6;
+  --accent-3: #f59e0b;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(91, 91, 247, 0.18), transparent 24%),
+    radial-gradient(circle at top right, rgba(16, 185, 129, 0.12), transparent 18%),
+    radial-gradient(circle at bottom right, rgba(244, 63, 94, 0.12), transparent 22%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.24), transparent 18%),
+    var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: var(--text);
+  color: var(--bg);
+}
+
+button,
+textarea {
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
