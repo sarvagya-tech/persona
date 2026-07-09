@@ -1,7 +1,7 @@
-import hitesh from "./hitesh.js";
-import piyush from "./piyush.js";
+import hitesh from "./hitesh";
+import piyush from "./piyush";
 
-export default {
-  hitesh,
-  piyush,
+export const personas = {
+    hitesh,
+    piyush
 };
